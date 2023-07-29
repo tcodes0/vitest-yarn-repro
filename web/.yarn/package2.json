@@ -1,0 +1,59 @@
+{
+    "name": "baristai-web",
+    "packageManager": "yarn@3.6.1",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "license": "UNLICENSED",
+    "scripts": {
+        "dev": "yarn vite",
+        "build": "yarn tsc && vite build",
+        "format": "yarn prettier . --write",
+        "test": "vitest",
+        "lint": "yarn eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "lint:fix": "yarn lint --fix",
+        "typecheck": "tsc --noEmit",
+        "preview": "yarn vite preview"
+    },
+    "lint-staged": {
+        "src/**/*.{js,jsx,ts,tsx,css,scss}": [
+            "eslint --cache --fix --max-warnings 0",
+            "prettier --write"
+        ],
+        "*.{json,mjs,cjs,yml}": [
+            "prettier --write"
+        ]
+    },
+    "dependencies": {
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "8.46.0",
+        "@testing-library/dom": "9.3.1",
+        "@testing-library/jest-dom": "5.17.0",
+        "@testing-library/react": "10.4.9",
+        "@testing-library/user-event": "14.4.3",
+        "@types/react": "18.2.17",
+        "@types/react-dom": "18.2.7",
+        "@types/testing-library__jest-dom": "5.14.9",
+        "@typescript-eslint/eslint-plugin": "latest",
+        "@typescript-eslint/parser": "latest",
+        "@vitejs/plugin-react": "4.0.3",
+        "eslint": "8.46.0",
+        "eslint-plugin-react": "latest",
+        "eslint-plugin-react-hooks": "4.6.0",
+        "eslint-plugin-react-refresh": "0.4.3",
+        "jsdom": "latest",
+        "lint-staged": "13.2.3",
+        "prettier": "3.0.0",
+        "typescript": "5.1.6",
+        "vite": "4.4.7",
+        "vitest": "0.31.4"
+    },
+    "dependenciesMeta": {
+        "prettier@3.0.0": {
+            "unplugged": true
+        }
+    }
+}
